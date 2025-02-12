@@ -37,7 +37,6 @@ export class ReservationService {
     let index = this.reservations.findIndex(res => res.id === id);
     updateReservation.id = id;
     this.reservations[index] = updateReservation;
-    this.reservations
     localStorage.setItem("reservations", JSON.stringify(this.reservations));
   }
   
