@@ -1,0 +1,41 @@
+<app-home></app-home>
+
+<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Data de Check-In:</label>
+        <input type="date" formControlName="checkInDate">
+        <div *ngIf="reservationForm.get('checkInDate')?.invalid && reservationForm.get('checkInDate')?.touched">
+            Data de Check-In é obrigatório.                        
+        </div>
+    </div>
+    <div>
+        <label>Data de Check-Out:</label>
+        <input type="date" formControlName="checkOutDate">
+        <div *ngIf="reservationForm.get('checkOutDate')?.invalid && reservationForm.get('checkOutDate')?.touched">
+            Data de Check-Out é obrigatório.                        
+        </div>
+    </div>
+    <div>
+        <label>Nome do Convidado:</label>
+        <input type="text" formControlName="guestName">
+        <div *ngIf="reservationForm.get('guestName')?.invalid && reservationForm.get('guestName')?.touched">
+            Nome do convidade é obrigatório.                        
+        </div>
+    </div>
+    <div>
+        <label>Email do Convidado:</label>
+        <input type="email" formControlName="guestEmail">
+        <div *ngIf="reservationForm.get('guestEmail')?.invalid && reservationForm.get('guestEmail')?.touched">
+            Email do convidade é obrigatório.                        
+        </div>
+    </div>
+    <div>
+        <label>Número do quarto:</label>
+        <input type="number" formControlName="roomNumber">
+        <div *ngIf="reservationForm.get('roomNumber')?.invalid && reservationForm.get('roomNumber')?.touched">
+            Número do quarto é obrigatório.                        
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="reservationForm.invalid">Enviar</button>
+</form>
