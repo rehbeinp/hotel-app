@@ -25,4 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
 # hotel-app
+Esse sistema foi desenvolvido para aprendizado e treinamento.
+É um sistema de reservsas, onde é possível criar reservas e visualizá-las. Nele há treŝ páginas: uma home, outra para realizar reservas e outra de visualização de reservas.
+
+Nele foi implementado uma simulação de API com o Mockoon, e validação de formulário reativa, que garante que os dados vindos do usuário sejam válidos. Foi estilizado com a biblioteca Bootstrap.
